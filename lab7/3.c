@@ -29,8 +29,8 @@ int main() {
   } else {
     printf("Родительский процесс начинает работу\n");
     sleep(5);
-    kill(child_pid, SIGUSR1);
     printf("Родительский процесс завершил работу\n");
+    kill(child_pid, SIGUSR1);
     wait(NULL);
   }
 

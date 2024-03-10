@@ -12,7 +12,7 @@ int main() {
   int p2[2]; // S --> C
 
   const char *fileNotFoundErr = "Файл не найден или не может быть прочитан\n";
-  const char *filePath = "fil.txt";
+  const char *filePath = "file.txt";
 
   if (pipe(p1) == -1 || pipe(p2) == -1) {
     perror("pipe");
@@ -75,8 +75,6 @@ int main() {
       perror("write");
       exit(EXIT_FAILURE);
     }
-
-    wait(NULL);
 
     char buffer[1024];
     ssize_t bytes_read;
